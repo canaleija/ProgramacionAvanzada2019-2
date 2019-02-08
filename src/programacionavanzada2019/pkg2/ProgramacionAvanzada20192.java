@@ -15,7 +15,15 @@ public class ProgramacionAvanzada20192 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Fecha fecha1 = new Fecha();
+        Fecha fecha2 = new Fecha(23,10,1999);
+        Fecha fecha3 = new Fecha(fecha2);
+        System.out.println();
+        
+       // System.out.println(f2.dia+"/"+f2.mes+"/"+f2.anyo);
+        
+        
     }
     
 }
