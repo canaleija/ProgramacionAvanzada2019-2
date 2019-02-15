@@ -10,25 +10,43 @@ package programacionavanzada2019.pkg2;
  * @author Roberto Cruz Leija
  */
 public class Fecha {
-    int dia;
-    int mes;
-    int anyo;
+    private int dia;
+    private int mes;
+    private int anyo;
     
-    Fecha(){
+    public Fecha(){
      dia = 0;
      mes = 0;
      anyo= 0;
     }
     // metodo constructor
-    Fecha(int d,int m, int a){
+    public Fecha(int d,int m, int a){
      dia = d;
      mes = m;
      anyo=a;
     }
-    Fecha(Fecha f){
-    dia = f.dia;
-    mes = f.mes;
-    anyo = f.anyo;
+    public Fecha(Fecha f){
+        dia = f.dia;
+        mes = f.mes;
+        anyo = f.anyo;
                
     }
+    
+    // definir e implmentar los metodos set
+    public void setDia(int d){
+        dia = d;
+    }
+    public void setMes(int m)
+    { 
+        mes=m;
+    }
+    // definir e implementar los metodos get
+    public int getDia(){
+        return dia;
+    } 
+     public int getMes()
+     {
+         return mes;
+     }
+    
 }

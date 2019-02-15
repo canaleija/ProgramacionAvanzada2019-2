@@ -3,25 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package programacionavanzada2019.pkg2;
+package poo;
 
 /**
  *
  * @author Roberto Cruz Leija
  */
-public class ProgramacionAvanzada20192 {
+public class PooMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Alumno juan = new Alumno(17,"Juan Alberto","20192345M","Mecatronica",new Escuela("UPIIZ","Cerro gato","92-2-34-56"),5);
         
-        
-        Fecha fecha1 = new Fecha();
-        fecha1.setDia(6);
-        fecha1.setMes(7);
-        
-        
+        System.out.println("Hola mundo");
     }
     
 }
