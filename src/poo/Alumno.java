@@ -29,7 +29,10 @@ public class Alumno extends Persona {
         this.semestre = semestre;
     }
 
-    
+    @Override
+    public void saludar(){
+        System.out.println("Hola soy un alumno");
+    }
     /**
      * @return the boleta
      */

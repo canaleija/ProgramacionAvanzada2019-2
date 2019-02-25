@@ -16,8 +16,9 @@ public class PooMain {
      */
     public static void main(String[] args) {
         
-        Alumno juanita = new Alumno(22,"Juanita",50,1.65,"Femenino","2019-2345", new Carrera(), new Escuela("UPIIZ","ENRIQUE SEGOVIANO","492313" ), 6);
-        Alumno mario = new Alumno();
+        Persona juanita = new Alumno(22,"Juanita",50,1.65,"Femenino","2019-2345", new Carrera(), new Escuela("UPIIZ","ENRIQUE SEGOVIANO","492313" ), 6);
+        juanita.saludar();
+        
         System.out.println();
     }
     

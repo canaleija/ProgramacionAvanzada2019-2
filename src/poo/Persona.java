@@ -34,6 +34,10 @@ public class Persona {
         this.altura = altura;
         this.genero = genero;
     }
+     
+    public void saludar(){
+        System.out.println("Hola!");
+    }
 
     /**
      * @return the edad
