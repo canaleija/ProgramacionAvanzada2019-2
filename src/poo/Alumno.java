@@ -9,52 +9,27 @@ package poo;
  *
  * @author Roberto Cruz Leija
  */
-public class Alumno {
+public class Alumno extends Persona {
     
-    private int edad;
-    private String nombre;
+   
     private String boleta;
-    private String carrera;
+    private Carrera carrera;
     private Escuela escuela;
     private int semestre;
 
-    public Alumno(int edad, String nombre, String boleta, String carrera, Escuela escuela, int semestre) {
-        this.edad = edad;
-        this.nombre = nombre;
+    public Alumno(){
+        super(); // ejecutando el constructor por defecto de la clase padre
+    }
+    
+    public Alumno(int edad,String nombre,double peso,double altura,String genero,String boleta, Carrera carrera, Escuela escuela, int semestre) {
+        super(edad,nombre,peso,altura,genero);
         this.boleta = boleta;
         this.carrera = carrera;
         this.escuela = escuela;
         this.semestre = semestre;
     }
 
-    /**
-     * @return the edad
-     */
-    public int getEdad() {
-        return edad;
-    }
-
-    /**
-     * @param edad the edad to set
-     */
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    
     /**
      * @return the boleta
      */
@@ -72,14 +47,14 @@ public class Alumno {
     /**
      * @return the carrera
      */
-    public String getCarrera() {
+    public Carrera getCarrera() {
         return carrera;
     }
 
     /**
      * @param carrera the carrera to set
      */
-    public void setCarrera(String carrera) {
+    public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }
 

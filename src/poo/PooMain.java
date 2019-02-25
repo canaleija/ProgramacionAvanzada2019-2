@@ -15,9 +15,10 @@ public class PooMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Alumno juan = new Alumno(17,"Juan Alberto","20192345M","Mecatronica",new Escuela("UPIIZ","Cerro gato","92-2-34-56"),5);
         
-        System.out.println("Hola mundo");
+        Alumno juanita = new Alumno(22,"Juanita",50,1.65,"Femenino","2019-2345", new Carrera(), new Escuela("UPIIZ","ENRIQUE SEGOVIANO","492313" ), 6);
+        Alumno mario = new Alumno();
+        System.out.println();
     }
     
 }
