@@ -15,7 +15,9 @@ public class GatoMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GatoGUI gato = new GatoGUI();
+
+        GatoGUI aux = new GatoGUI();
+     
     }
     
 }

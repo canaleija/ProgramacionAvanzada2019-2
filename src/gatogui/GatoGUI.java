@@ -32,15 +32,26 @@ public class GatoGUI extends JFrame {
         // inicializar los Jpanels
         this.panelBotones = new JPanel(new GridLayout(3,3));
         this.panelEtiquetas = new JPanel(new GridLayout(1,2));
-        JButton b1 = new JButton("1");
-        JButton b2 = new JButton("2");
-        JButton b3 = new JButton("3");
-        JButton b4 = new JButton("4");
-        JButton b5 = new JButton("5");
-        JButton b6 = new JButton("6");
-        JButton b7 = new JButton("7");
-        JButton b8 = new JButton("8");
-        JButton b9 = new JButton("9");
+        JButtonNuevo b1 = new JButtonNuevo(0,0);
+        JButtonNuevo b2 = new JButtonNuevo(0,1);
+        JButtonNuevo b3 = new JButtonNuevo(0,2);
+        JButtonNuevo b4 = new JButtonNuevo(1,0);
+        JButtonNuevo b5 = new JButtonNuevo(1,1);
+        JButtonNuevo b6 = new JButtonNuevo(1,2);
+        JButtonNuevo b7 = new JButtonNuevo(2,0);
+        JButtonNuevo b8 = new JButtonNuevo(2,1);
+        JButtonNuevo b9 = new JButtonNuevo(2,2);
+        ListenerGato escuchadorBotones = new ListenerGato();
+        b1.addActionListener(escuchadorBotones);
+        b2.addActionListener(escuchadorBotones);
+        b3.addActionListener(escuchadorBotones);
+        b4.addActionListener(escuchadorBotones);
+        b5.addActionListener(escuchadorBotones);
+        b6.addActionListener(escuchadorBotones);
+        b7.addActionListener(escuchadorBotones);
+        b8.addActionListener(escuchadorBotones);
+        b9.addActionListener(escuchadorBotones);
+        
         // agregamos los botones
         this.panelBotones.add(b1);
         this.panelBotones.add(b2);
