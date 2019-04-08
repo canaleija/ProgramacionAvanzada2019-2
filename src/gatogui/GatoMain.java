@@ -17,6 +17,7 @@ public class GatoMain {
     public static void main(String[] args) {
 
         GatoGUI aux = new GatoGUI();
+        
      
     }
     

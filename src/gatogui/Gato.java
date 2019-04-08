@@ -22,19 +22,14 @@ public class Gato {
         this.jugada = -1;
     }
     
-    public void agregarJugada(int r, int c){
+    public boolean agregarJugada(int r, int c){
     // aumentamos la jugada 
         this.jugada++;
     // agregamos la jugada a la matriz
-    this.matriz[r][c]=this.movimientos[this.jugada];
+    this.matriz[r][c]=this.getMovimientos()[this.getJugada()];
     // verificar si alguien gana
-    boolean ganador = verificarJugadas(this.movimientos[this.jugada]);
-    if (ganador){
-    System.out.println("Gano "+this.movimientos[this.jugada]);
-    } else {
-     System.out.println("No Gano "+this.movimientos[this.jugada]);
-    
-    }
+    boolean ganador = verificarJugadas(this.getMovimientos()[this.getJugada()]);
+    return ganador;
     }
 
     public boolean verificarJugadas(int turno) {
@@ -120,6 +115,20 @@ public class Gato {
         
        
         return false;
+    }
+
+    /**
+     * @return the movimientos
+     */
+    public int[] getMovimientos() {
+        return movimientos;
+    }
+
+    /**
+     * @return the jugada
+     */
+    public int getJugada() {
+        return jugada;
     }
     
     

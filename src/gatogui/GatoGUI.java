@@ -41,7 +41,9 @@ public class GatoGUI extends JFrame {
         JButtonNuevo b7 = new JButtonNuevo(2,0);
         JButtonNuevo b8 = new JButtonNuevo(2,1);
         JButtonNuevo b9 = new JButtonNuevo(2,2);
-        ListenerGato escuchadorBotones = new ListenerGato();
+        // escuchador para los botones
+        Gato gato = new Gato();
+        ListenerGato escuchadorBotones = new ListenerGato(gato);
         b1.addActionListener(escuchadorBotones);
         b2.addActionListener(escuchadorBotones);
         b3.addActionListener(escuchadorBotones);
