@@ -5,6 +5,8 @@
  */
 package imagenes;
 
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -57,4 +59,36 @@ public class ImageManager {
       public static Image toImage (BufferedImage bi){
         return bi.getScaledInstance(bi.getWidth(),bi.getHeight(), BufferedImage.TYPE_INT_RGB);
     }
+      
+      public static BufferedImage toBufferedImage (Image imagen){
+         // imagen es un objeto de tipo BufferedImage
+        if (imagen instanceof BufferedImage){
+          return (BufferedImage)imagen;
+        }
+        BufferedImage bi = 
+                new BufferedImage(imagen.getWidth(null), imagen.getHeight(null), BufferedImage.TYPE_INT_RGB);
+        
+        Graphics2D nueva = bi.createGraphics();
+        nueva.drawImage(imagen, 0, 0,null);
+        nueva.dispose();
+        
+        return bi;
+    }
+      public static Image convertirGrises(Image imagenOriginal){
+         BufferedImage bi = ImageManager.toBufferedImage(imagenOriginal);
+         // recorremos la imgagen
+         for(int x=0;x<bi.getWidth();x++)
+             for(int y=0; y <bi.getHeight();y++){
+             Color color = new Color(bi.getRGB(x, y));
+             int p = (color.getRed()+color.getGreen()+color.getBlue())/3;
+//            int r = 255- color.getRed();
+//            int g = 255- color.getGreen();
+//            int b = 255- color.getBlue();
+//            color = new Color(r, g, b);
+           color = new Color(p, p, p);
+            bi.setRGB(x, y, color.getRGB());
+             }
+     
+         return ImageManager.toImage(bi); 
+      }
 }

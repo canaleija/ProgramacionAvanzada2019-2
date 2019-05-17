@@ -5,7 +5,9 @@
  */
 package imagenes;
 
+import java.awt.Color;
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 
 /**
  *
@@ -18,6 +20,9 @@ public class ImagenesMain {
      */
     public static void main(String[] args) {
         Image imagen = ImageManager.openImage();
+        // manipular la imagen 
+        imagen = ImageManager.convertirGrises(imagen);
+        JFramePersonal frame = new JFramePersonal(imagen);
         System.out.println();
     }
     
